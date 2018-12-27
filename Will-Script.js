@@ -11,8 +11,8 @@ console.log(randomNum);
 console.log(word);
 console.log(sightWords.length);
 
-
 displayWord();
+
 
 function displayWord () {
     document.getElementById("word").innerHTML = word;
@@ -21,11 +21,11 @@ function displayWord () {
 document.getElementById("right").onclick = function removeRight () {
     sightWords.splice(randomNum, 1);
     console.log(sightWords);
-    var randomNum = Math.floor(Math.random() * sightWords.length);
+    console.log("New random number is: " + randomNum);
     var word = sightWords[randomNum];
-    console.log("New number: " + randomNum);
-    console.log("New word: " + word);
-
+    console.log("New word is: " + word);
+    document.getElementById("word").innerHTML = word;
+    randomNum = Math.floor(Math.random() * sightWords.length);
 }
 
 
@@ -35,7 +35,7 @@ document.getElementById("right").onclick = function removeRight () {
 
 // function startOver() {
 //     console.log(sightWords.length);
-    // var randomNum = Math.floor(Math.random() * sightWords.length);
+//     var randomNum = Math.floor(Math.random() * sightWords.length);
 //     var word = sightWords[randomNum];
 //     document.getElementById("word").innerHTML = word;
 //     document.getElementById("rightWord").innerHTML = word + randomNum;
